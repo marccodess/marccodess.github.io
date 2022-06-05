@@ -928,6 +928,7 @@ li{
     right: 1rem;
     bottom: 5rem;
     background-color: var(--first-color);
+    color:white;
     opacity: .8;
     padding: 0 .3rem;
     border-radius: .4rem;
