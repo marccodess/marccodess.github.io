@@ -912,8 +912,8 @@ li {
 .footer__links {
     font-size: var(--small-font-size);
     display: grid;
-    grid-template-columns: repeat(3, 0.2fr);
-    grid-template-rows: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 2fr);
     row-gap: 1.5rem;
     margin-top: 1rem;
     width: 100%;
@@ -929,7 +929,7 @@ li {
     grid-template-columns: repeat(3, 0.1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 0.5rem;
-    margin-top: -2rem;
+    margin-top: 0.5rem;
     padding: 1rem;
 }
 
@@ -1258,7 +1258,7 @@ li {
 
     .footer__links {
         flex-direction: row;
-        column-gap: 2rem;
+        column-gap: 3rem;
     }
 
     .footer__socials {
