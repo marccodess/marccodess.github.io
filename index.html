@@ -196,56 +196,93 @@
             <h2 class="section__title">Latest Blog Posts</h2>
             <span class="section__subtitle">Recent articles from Medium</span>
 
-            <div class="medium__container container">
-                <div class="medium__grid">
-                    <!-- Medium Post 1 -->
-                    <div class="medium__content">
-                        <img src="assets/img/medium-post-1.jpg" alt="" class="medium__img">
-                        <div class="medium__data">
-                            <h3 class="medium__title">Your First Article Title</h3>
-                            <p class="medium__description">
-                                Brief description of your first article...
-                            </p>
-                            <a href="https://medium.com/your-first-article-link" target="_blank"
-                                class="button button--flex button--small medium__button">
-                                Read More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+            <div class="medium__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- First Slide (3 articles) -->
+                    <div class="swiper-slide">
+                        <div class="medium__grid">
+                            <!-- Medium Post 1 -->
+                            <div class="medium__content">
+                                <img src="assets/img/medium-post-1.jpg" alt="" class="medium__img">
+                                <div class="medium__data">
+                                    <h3 class="medium__title">Your First Article Title</h3>
+                                    <p class="medium__description">
+                                        Brief description of your first article...
+                                    </p>
+                                    <a href="https://medium.com/your-first-article-link" target="_blank"
+                                        class="button button--flex button--small medium__button">
+                                        Read More
+                                        <i class="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Medium Post 2 -->
+                            <div class="medium__content">
+                                <img src="assets/img/medium-post-2.jpg" alt="" class="medium__img">
+                                <div class="medium__data">
+                                    <h3 class="medium__title">Your Second Article Title</h3>
+                                    <p class="medium__description">
+                                        Brief description of your second article...
+                                    </p>
+                                    <a href="https://medium.com/your-second-article-link" target="_blank"
+                                        class="button button--flex button--small medium__button">
+                                        Read More
+                                        <i class="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Medium Post 3 -->
+                            <div class="medium__content">
+                                <img src="assets/img/medium-post-3.jpg" alt="" class="medium__img">
+                                <div class="medium__data">
+                                    <h3 class="medium__title">Your Third Article Title</h3>
+                                    <p class="medium__description">
+                                        Brief description of your third article...
+                                    </p>
+                                    <a href="https://medium.com/your-third-article-link" target="_blank"
+                                        class="button button--flex button--small medium__button">
+                                        Read More
+                                        <i class="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Medium Post 2 -->
-                    <div class="medium__content">
-                        <img src="assets/img/medium-post-2.jpg" alt="" class="medium__img">
-                        <div class="medium__data">
-                            <h3 class="medium__title">Your Second Article Title</h3>
-                            <p class="medium__description">
-                                Brief description of your second article...
-                            </p>
-                            <a href="https://medium.com/your-second-article-link" target="_blank"
-                                class="button button--flex button--small medium__button">
-                                Read More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Medium Post 3 -->
-                    <div class="medium__content">
-                        <img src="assets/img/medium-post-3.jpg" alt="" class="medium__img">
-                        <div class="medium__data">
-                            <h3 class="medium__title">Your Third Article Title</h3>
-                            <p class="medium__description">
-                                Brief description of your third article...
-                            </p>
-                            <a href="https://medium.com/your-third-article-link" target="_blank"
-                                class="button button--flex button--small medium__button">
-                                Read More
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
+                    <!-- Second Slide (additional articles) -->
+                    <div class="swiper-slide">
+                        <div class="medium__grid">
+                            <!-- Medium Post 4 -->
+                            <div class="medium__content">
+                                <img src="assets/img/medium-post-4.jpg" alt="" class="medium__img">
+                                <div class="medium__data">
+                                    <h3 class="medium__title">Your Fourth Article Title</h3>
+                                    <p class="medium__description">
+                                        Brief description of your fourth article...
+                                    </p>
+                                    <a href="https://medium.com/your-fourth-article-link" target="_blank"
+                                        class="button button--flex button--small medium__button">
+                                        Read More
+                                        <i class="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!--============ Add Arrows =============-->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!--============ Add Pagination =============-->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
