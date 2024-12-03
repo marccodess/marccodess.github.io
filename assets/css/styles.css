@@ -908,7 +908,7 @@ li {
 }
 
 .footer__subtitle {
-    font-size: var(--normal-font-size);
+    font-size: var(--h3-font-size);
     padding: 1rem;
 }
 
@@ -920,8 +920,10 @@ li {
     row-gap: 0.5rem;
     column-gap: 0.5rem;
     margin-top: 2rem;
-    width: 100%;
+    width: 60%;
     padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer__link:hover {
@@ -936,7 +938,6 @@ li {
     margin-top: 2rem;
     /* margin-bottom: 1.5rem; */
     padding: 1rem;
-    text-align: center;
 }
 
 .footer__social {
@@ -1267,9 +1268,9 @@ li {
         column-gap: 3rem;
     }
 
-    .footer__socials {
+    /* .footer__socials {
         justify-self: flex-end;
-    }
+    } */
 
     .footer__copy {
         margin-top: 4.5rem;
@@ -1320,5 +1321,52 @@ li {
 
     .contact__inputs {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*==================== MEDIUM POSTS ====================*/
+.medium__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.medium__content {
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+}
+
+.medium__img {
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: var(--mb-1);
+}
+
+.medium__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.medium__description {
+    margin-bottom: var(--mb-0-75);
+}
+
+.medium__button:hover .button__icon {
+    transform: translateX(.25rem);
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .medium__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .medium__grid {
+        grid-template-columns: 1fr;
     }
 }
