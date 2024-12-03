@@ -1325,6 +1325,11 @@ li {
 }
 
 /*==================== MEDIUM POSTS ====================*/
+.medium__container {
+    overflow: initial;
+    padding: 4.5rem 0;
+}
+
 .medium__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
