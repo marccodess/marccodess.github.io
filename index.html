@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--==================== UNICONS ====================-->
+    <!-- UNICONS -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--==================== CSS ====================-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>marccodess | Portfolio</title>
 </head>
 
 <body class="dark-theme">
-    <!--==================== HEADER ====================-->
+    <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">marccodess 🚀</a>
@@ -62,7 +61,7 @@
                 <!--Theme change button-->
                 <i class="uil uil-moon change-theme uil-sun" id="theme-button"></i>
 
-                <div class="nav__toggle" id="nav-toggle">
+                <div class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
                     <i class="uil uil-apps"></i>
                 </div>
             </div>
@@ -95,9 +94,6 @@
                             class="home__social-icon">
                             <i class="uil uil-youtube"></i>
                         </a>
-                        <!-- <a href="https://www.buymeacoffee.com/marccodess" target="_blank" class="home__social-icon">
-                            <i class="uil uil-coffee"></i>
-                        </a> -->
                     </div>
                     <div class="home__img">
                         <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
@@ -122,20 +118,13 @@
                         <h1 class="home__title">Hi, I'm Marc 👋🏼</h1>
                         <h4 class="home__aka">marccodess 🚀</h4>
                         <h3 class="home__subtitle">Lead Data Scientist</h3>
-                        <p class="home__description">Passion for building Data Products & Teams</p>
+                        <p class="home__description">Passionate about building high-impact teams & products that
+                            drive ROI</p>
                         <a href="#contact" class="button button--flex">
                             Contact Me <i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
                 </div>
-
-                <!-- <div class="home_scroll">
-                    <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down homw__scroll-arrow"></i>
-                    </a>
-                </div> -->
             </div>
         </section>
 
@@ -145,43 +134,50 @@
             <span class="section__subtitle"><i></i></span>
 
             <div class="about__container container grid">
-                <!-- <img src="assets/img/about.jpg" alt="" class="about__img"> -->
 
                 <div class="about__data">
                     <p class="about__description">
-                        Since completing my postgraduate studies in 2017, I have established a successful career in Data
-                        Science and Advanced Analytics, working across both innovative startups and enterprise-level
-                        organizations in logistics, eCommerce, and telecommunications.
+                        Since completing my postgraduate studies in 2017, I have established a career in
+                        Data Science and
+                        Advanced Analytics, accumulating experience across both innovative startups and
+                        enterprise organisations
+                        within logistics, eCommerce, and telecommunication domains.
                         <br><br>
-                        My diverse industry experience has provided me with comprehensive expertise in both technical
-                        and business domains. As an accomplished Python developer, I specialize in machine learning and
-                        artificial intelligence implementations, leveraging cutting-edge technologies to deliver
-                        impactful solutions.
+                        My cross-industry experience has enabled me to develop comprehensive expertise in both technical
+                        implementation
+                        and business strategy. As an advanced Python developer, I specialise in developing and
+                        deploying sophisticated
+                        machine learning and artificial intelligence solutions, leveraging cutting-edge technologies to
+                        deliver
+                        measurable business value.
                         <br><br>
-                        Throughout my career progression, I have developed extensive practical experience in data
-                        engineering and web development, complementing my core expertise in advanced analytics and
-                        machine learning.
+                        Currently, I lead a team of Data Scientists at Virgin Media O2,
+                        where we drive transformative innovation and develop high-impact solutions that revolutionise
+                        network operations and customer experience.
                         <br><br>
-                        This portfolio serves as a comprehensive showcase of my professional capabilities and
-                        open-source contributions. Initially conceived as a development project during the 2020
-                        pandemic, it has evolved into an integrated platform that consolidates my GitHub repositories,
-                        professional networks, and technical publications.
+                        This portfolio functions as a technical repository of my professional expertise and open-source
+                        contributions.
+                        Originally initiated as an experimental development project during the COVID-19 pandemic, it has
+                        matured into
+                        a comprehensive technical platform that integrates my GitHub repositories, professional network
+                        connections,
+                        and technical publications.
 
                     </p>
 
                     <div class="about__info">
                         <div>
-                            <span class="about__info-title">08+</span>
+                            <span class="about__info-title">>8</span>
                             <span class="about__info-name">Years <br> Experience </span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">03</span>
-                            <span class="about__info-name">Industry Sectors <br> Worked </span>
+                            <span class="about__info-title">>£10m</span>
+                            <span class="about__info-name">Business Value <br> Generated </span>
                         </div>
 
                         <div>
-                            <span class="about__info-title">>2.5k</span>
+                            <span class="about__info-title">>4.4k</span>
                             <span class="about__info-name">Online <br> Connections </span>
                         </div>
                     </div>
@@ -202,51 +198,66 @@
                     <div class="swiper-slide">
                         <div class="medium__grid">
                             <!-- Medium Post 1 -->
-                            <div class="medium__content">
-                                <img src="assets/img/medium-post-1.jpg" alt="" class="medium__img">
-                                <div class="medium__data">
-                                    <h3 class="medium__title">Your First Article Title</h3>
-                                    <p class="medium__description">
-                                        Brief description of your first article...
-                                    </p>
-                                    <a href="https://medium.com/your-first-article-link" target="_blank"
-                                        class="button button--flex button--small medium__button">
-                                        Read More
-                                        <i class="uil uil-arrow-right button__icon"></i>
-                                    </a>
+                            <div class="medium__content most-recent">
+                                <!-- Most Recent Label -->
+                                <div class="most-recent-label">Most Recent</div>
+
+                                <div class="medium__top">
+                                    <img src="assets/img/medium_cursor_vscode.jpeg" alt="Medium post thumbnail"
+                                        class="medium__img" loading="lazy">
+                                    <div class="medium__data">
+                                        <h3 class="medium__title">Should you switch from VSCode to Cursor?</h3>
+                                        <p class="medium__description">
+                                            My experience using VSCode (GitHub Copilot) and Cursor (Claude 3.5 Sonnet)
+                                            as a
+                                            Data Scientist
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <a href="https://marccodess.medium.com/should-you-switch-from-vscode-to-cursor-45b1a0320d07"
+                                    target="_blank" class="button button--flex button--small medium__button">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
                             </div>
 
                             <!-- Medium Post 2 -->
                             <div class="medium__content">
-                                <img src="assets/img/medium-post-2.jpg" alt="" class="medium__img">
-                                <div class="medium__data">
-                                    <h3 class="medium__title">Your Second Article Title</h3>
+                                <div class="medium__top">
+                                    <img src="assets/img/medium_ollama.jpeg" alt="Medium post thumbnail"
+                                        class="medium__img" loading="lazy">
+                                    <h3 class="medium__title">Run LLMs Locally using Ollama</h3>
                                     <p class="medium__description">
-                                        Brief description of your second article...
+                                        Step-by-step process to running large language models locally on your laptop
                                     </p>
-                                    <a href="https://medium.com/your-second-article-link" target="_blank"
-                                        class="button button--flex button--small medium__button">
-                                        Read More
-                                        <i class="uil uil-arrow-right button__icon"></i>
-                                    </a>
                                 </div>
+
+                                <a href="https://marccodess.medium.com/run-llms-locally-using-ollama-8f04dd9b14f9"
+                                    target="_blank" class="button button--flex button--small medium__button">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
                             </div>
 
                             <!-- Medium Post 3 -->
                             <div class="medium__content">
-                                <img src="assets/img/medium-post-3.jpg" alt="" class="medium__img">
-                                <div class="medium__data">
-                                    <h3 class="medium__title">Your Third Article Title</h3>
-                                    <p class="medium__description">
-                                        Brief description of your third article...
-                                    </p>
-                                    <a href="https://medium.com/your-third-article-link" target="_blank"
-                                        class="button button--flex button--small medium__button">
-                                        Read More
-                                        <i class="uil uil-arrow-right button__icon"></i>
-                                    </a>
+                                <div class="medium__top">
+                                    <img src="assets/img/medium_confusion_matrix.jpeg" alt="Medium post thumbnail"
+                                        class="medium__img" loading="lazy">
+                                    <div class="medium__data">
+                                        <h3 class="medium__title">What is a Confusion Matrix?</h3>
+                                        <p class="medium__description">
+                                            What are they, why, and when should we use them?
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <a href="https://marccodess.medium.com/what-is-a-confusion-matrix-05c9969fc8d8"
+                                    target="_blank" class="button button--flex button--small medium__button">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -256,18 +267,22 @@
                         <div class="medium__grid">
                             <!-- Medium Post 4 -->
                             <div class="medium__content">
-                                <img src="assets/img/medium-post-4.jpg" alt="" class="medium__img">
-                                <div class="medium__data">
-                                    <h3 class="medium__title">Your Fourth Article Title</h3>
-                                    <p class="medium__description">
-                                        Brief description of your fourth article...
-                                    </p>
-                                    <a href="https://medium.com/your-fourth-article-link" target="_blank"
-                                        class="button button--flex button--small medium__button">
-                                        Read More
-                                        <i class="uil uil-arrow-right button__icon"></i>
-                                    </a>
+                                <div class="medium__top">
+                                    <img src="assets/img/medium_demystifying_ai.jpeg" alt="Medium post thumbnail"
+                                        class="medium__img" loading="lazy">
+                                    <div class="medium__data">
+                                        <h3 class="medium__title">Demystifying AI: Explainable AI for Stakeholders</h3>
+                                        <p class="medium__description">
+                                            Bridging the Gap Between Data Scientists and Stakeholders
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <a href="https://marccodess.medium.com/demystifying-ai-explainable-ai-for-stakeholders-ec2107c812cc"
+                                    target="_blank" class="button button--flex button--small medium__button">
+                                    Read More
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -368,7 +383,7 @@
                                 <span class="qualification__subtitle">
                                     <a href="https://www.viginmedia.co.uk/" target="_blank">Virgin Media O2</a>
                                 </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
+                                <h5 class="qualification__location">London/Manchester, UK</h5>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
                                     Jan 2024 - Present
@@ -395,7 +410,7 @@
                                 <span class="qualification__subtitle">
                                     <a href="https://www.viginmedia.co.uk/" target="_blank">Virgin Media O2</a>
                                 </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
+                                <h5 class="qualification__location">London/Manchester, UK</h5>
                                 <div class="qualification__calendar">
                                     <i class="uil uil-calendar-alt"></i>
                                     July 2023 - Jan 2024
@@ -465,27 +480,6 @@
                                 <span class="qualification__line"></span>
                             </div>
                         </div>
-
-                        <!--===============================QUALIFICATION 4 ===========================-->
-                        <!-- <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Data and Campaign Insight Analyst</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.https://www.co-operativebank.co.uk/" target="_blank">The
-                                        Co-operative Bank</a>
-                                </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    July 2017 - April 2018
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -511,27 +505,26 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">Automation</h4>
+                            <h4 class="services__model-title">Automation & Process Optimization</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Experience extracting data from websites/portals by implementing
-                                        web scraping techniques.
-                                    </p>
+                                    <p>Developed and implemented sophisticated web scraping solutions for 
+                                       automated data extraction from complex web applications and enterprise portals.</p>
                                 </li>
 
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Automated systematic processes reducing human reliability across multiple
-                                        businesses.
-                                    </p>
+                                    <p>Designed and deployed end-to-end automation workflows that significantly 
+                                       reduced manual intervention and improved operational efficiency across 
+                                       multiple business units.</p>
                                 </li>
 
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Packages:</b> Selenium, Beautiful Soup</p>
+                                    <p><b>Technical Stack:</b> Selenium WebDriver, Beautiful Soup</p>
                                 </li>
                             </ul>
                         </div>
@@ -551,25 +544,27 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">ML</h4>
+                            <h4 class="services__model-title">Machine Learning</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Implementation of supervised and unsupervised learning techniques to aid business
-                                        decision-making.</p>
+                                    <p>Design and implementation of sophisticated machine learning solutions 
+                                       for complex business problems, enabling data-driven insights and 
+                                       automated decision-making systems.</p>
                                 </li>
 
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p><b>Techniques Applied:</b> XGBoost, Random Forest, K-Means, Linear Regression,
-                                        PCA, LightGBM, CatBoost</p>
+                                    <p><b>Core Expertise:</b> Gradient Boosting (XGBoost, LightGBM, CatBoost), 
+                                       Ensemble Methods (Random Forest), Clustering (K-Means), 
+                                       Dimensionality Reduction (PCA), Statistical Modeling</p>
                                 </li>
 
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Packages:</b> Sklearn, Statsmodels, Pandas, NumPy</p>
+                                    <p><b>Technical Stack:</b> scikit-learn, statsmodels, pandas, NumPy</p>
                                 </li>
                             </ul>
                         </div>
@@ -589,24 +584,28 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">Deep Learning</h4>
+                            <h4 class="services__model-title">Deep Learning & Neural Networks</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Designed and developed an NLP neural network architecture classifying customer
-                                        intention for contacting via voice and digital channels.</p>
+                                    <p>Architected and implemented custom neural networks for Natural Language Processing, 
+                                       enabling automated customer intent classification across multiple communication channels 
+                                       with high accuracy.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Developed computer vision models for an industry leading client, optimising
-                                        visual merchandising productivity and stock levels.
-                                    </p>
+                                    <p>Developed and deployed advanced Computer Vision solutions for retail analytics, 
+                                       optimizing inventory management and merchandising efficiency for enterprise-level 
+                                       clients.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Packages:</b> Tensorflow, Keras, PyTorch</p>
+                                    <p><b>Technical Stack:</b> PyTorch, TensorFlow, Keras, 
+                                       Neural Network Architecture Design & Optimization</p>
                                 </li>
                             </ul>
                         </div>
@@ -626,25 +625,26 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">Cloud Computing</h4>
+                            <h4 class="services__model-title">Cloud Architecture & MLOps</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Hands-on experience working with GCP, specifically Vertex AI and BigQuery.
-                                    </p>
+                                    <p>Extensive experience with Google Cloud Platform (GCP), specializing in 
+                                       ML model deployment using Vertex AI and large-scale data processing with BigQuery.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Experience using both AWS and Microsoft Azure for EC2 and Azure VM purposes.
-                                    </p>
+                                    <p>Cross-platform expertise across major cloud providers (AWS, Azure, GCP), 
+                                       focusing on compute infrastructure optimization and scalable ML deployments.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Features:</b> Vertex AI, BigQuery, Cloud Storage, Cloud SDK, Dataflow,
-                                        Looker
-                                    </p>
+                                    <p><b>Core Technologies:</b> Vertex AI, BigQuery, Model Garden, Cloud Storage, Cloud SDK, 
+                                       Dataflow, Looker, EC2</p>
                                 </li>
                             </ul>
                         </div>
@@ -664,24 +664,28 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">Data Engineering</h4>
+                            <h4 class="services__model-title">Data Engineering & Architecture</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Hands-on experience designing database
-                                        architectures, data pipelines and transformations via dbt Cloud.
-                                    </p>
+                                    <p>Designed and implemented robust data architectures and ETL pipelines, 
+                                       leveraging dbt Cloud for scalable data transformations and 
+                                       maintaining data quality.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Multiple year exposure to MSSQL, BigQuery and MongoDB Atlas.
-                                    </p>
+                                    <p>Extensive experience with diverse database technologies, including 
+                                       BigQuery for analytics, MSSQL for transactional data, and MongoDB 
+                                       for document-based storage solutions.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Software:</b> BigQuery, SQL Server, dbt, MongoDB, SQLite</p>
+                                    <p><b>Technical Stack:</b> Google BigQuery, Microsoft SQL Server, 
+                                       dbt Cloud, MongoDB Atlas, SQLite, DBeaver.</p>
                                 </li>
                             </ul>
                         </div>
@@ -691,7 +695,7 @@
                 <div class="services__content">
                     <div>
                         <i class="uil uil-arrow services__icon"></i>
-                        <h3 class="services__title">Web Development</h3>
+                        <h3 class="services__title">GenAI Solutions</h3>
                     </div>
 
                     <span class="button button--flex button--small button--link services__button">
@@ -701,30 +705,23 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <h4 class="services__model-title">Web Development</h4>
+                            <h4 class="services__model-title">RAG & AI-Powered Development</h4>
                             <i class="uil uil-times services__modal-close"></i>
 
                             <ul class="services__model-services grid">
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Enhanced web development skills during the Covid-19 pandemic.
-                                    </p>
+                                    <p>Design and implementation of Retrieval-Augmented Generation (RAG) pipelines, integrating domain-specific data for accurate and context-aware AI responses.</p>
                                 </li>
 
                                 <li class="services__modal-service">
                                     <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Developed websites and web applications using Python. Experience with
-                                        front-end and
-                                        back-end processes.
-                                    </p>
+                                    <p>Expertise in vector embeddings to efficiently encode, search, and retrieve information using state-of-the-art vectorization techniques.</p>
                                 </li>
+
                                 <li class="services__modal-service">
                                     <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Languages:</b> HTML, CSS, SCSS, JavaScript</p>
-                                </li>
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Frameworks:</b> Flask, Django</p>
+                                    <p><b>Technical Stack:</b> LLMs, LangChain, LlamaIndex, ChromaDB, OpenAI APIs.</p>
                                 </li>
                             </ul>
                         </div>
@@ -775,7 +772,8 @@
                     </div>
 
                     <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/genetic-algorithm-project-image.png" alt="" class="portfolio__img">
+                        <img src="assets/img/genetic-algorithm-project-image.png"
+                            alt="Visualization of genetic algorithm feature selection process" class="portfolio__img">
 
                         <div class="portfolio__data">
                             <h3 class="portfolio__title">Feature Selection using Genetic Algorithms</h3>
@@ -1035,7 +1033,7 @@
                     <span class="footer__subtitle">Data Science Lead</span>
                 </div>
 
-                <ui class="footer__links">
+                <ul class="footer__links">
                     <li>
                         <a href="#aboutme" class="footer__link">About Me</a>
                     </li>
@@ -1051,7 +1049,7 @@
                     <li>
                         <a href="#resources" class="footer__link">Resources</a>
                     </li>
-                </ui>
+                </ul>
 
                 <div class="footer__socials">
                     <a href="https://www.github.com/marccodess/" target="_blank" class="footer__social">
@@ -1086,10 +1084,10 @@
     </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
