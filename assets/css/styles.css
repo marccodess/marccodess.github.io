@@ -23,6 +23,7 @@
     --container-color: #FFF;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --white-color: hsl(var(--hue-color), 0%, 100%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -1327,7 +1328,7 @@ li {
 /*==================== MEDIUM POSTS ====================*/
 .medium__container {
     overflow: initial;
-    padding: 4.5rem 0;
+    padding: 1rem 0;
 }
 
 .medium__grid {
@@ -1337,14 +1338,33 @@ li {
 }
 
 .medium__content {
-    background-color: var(--container-color);
-    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px;
     padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    border: 2px solid #5789e0;
+    border-radius: var(--mb-0-5);
+    background: var(--container-color);
+}
+
+.medium__top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.medium__data {
+    flex: 1;
 }
 
 .medium__img {
-    width: 100%;
+    width: 16rem;
+    height: 16rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: .5rem;
     margin-bottom: var(--mb-1);
 }
@@ -1356,6 +1376,12 @@ li {
 
 .medium__description {
     margin-bottom: var(--mb-0-75);
+}
+
+.medium__button {
+    margin-top: 1rem;
+    align-self: flex-start;
+    text-decoration: none;
 }
 
 .medium__button:hover .button__icon {
@@ -1374,4 +1400,24 @@ li {
     .medium__grid {
         grid-template-columns: 1fr;
     }
+}
+
+.medium__content.most-recent {
+    position: relative;
+    border: 2px solid #16a451;
+    overflow: hidden;
+}
+
+.most-recent-label {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #16a451, #2ee97c);
+    color: var(--white-color);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(87, 137, 224, 0.2);
 }
