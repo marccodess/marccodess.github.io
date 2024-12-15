@@ -42,7 +42,7 @@
     "vsicons.dontShowNewVersionMessage": true,
     "interactiveWindow.executeWithShiftEnter": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 14,
     "editor.accessibilitySupport": "off",
     "notebook.lineNumbers": "on",
     "notebook.output.textLineLimit": 100,
