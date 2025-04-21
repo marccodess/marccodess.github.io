@@ -77,17 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to close all modals
     const closeAllModals = () => {
         const activeModals = document.querySelectorAll('.services__modal.active-modal');
-        activeModals.forEach((modal) => {
+        activeModals.forEach(modal => {
             modal.classList.remove('active-modal');
         });
     };
 
     // Event delegation for "View More" buttons
     servicesContainer.addEventListener('click', (event) => {
-        if (event.target.classList.contains('services__button')) {
-            closeAllModals(); // Close any open modals
-            const modal = event.target.nextElementSibling;
+        if (event.target.classList.contains('services__button') ||
+            event.target.closest('.services__button')) {
+            const modal = event.target.closest('.services__content').querySelector('.services__modal');
             if (modal) {
+                event.stopPropagation(); // Prevent event from bubbling to document
                 modal.classList.add('active-modal');
             }
         }
@@ -103,11 +104,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close modals when clicking outside of them
+    // Close modals when clicking outside
     document.addEventListener('click', (event) => {
-        if (!event.target.closest('.services__modal') && !event.target.closest('.services__button')) {
+        if (!event.target.closest('.services__modal-content') && 
+            !event.target.closest('.services__button')) {
             closeAllModals();
         }
+    });
+
+    // Prevent modal content clicks from closing the modal
+    const modalContents = document.querySelectorAll('.services__modal-content');
+    modalContents.forEach(content => {
+        content.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
     });
 });
 
