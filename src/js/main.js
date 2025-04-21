@@ -71,25 +71,43 @@ tabs.forEach(tab => {
 })
 
 /*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close');
+document.addEventListener('DOMContentLoaded', () => {
+    const servicesContainer = document.getElementById('services-container');
 
-let modal = function (modalClick) {
-    modalViews[modalClick].classList.add('active-modal');
-};
-
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        modal(i);
-    })
-});
-
-modalCloses.forEach(modalClose => {
-    modalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal');
+    // Function to close all modals
+    const closeAllModals = () => {
+        const activeModals = document.querySelectorAll('.services__modal.active-modal');
+        activeModals.forEach((modal) => {
+            modal.classList.remove('active-modal');
         });
+    };
+
+    // Event delegation for "View More" buttons
+    servicesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('services__button')) {
+            closeAllModals(); // Close any open modals
+            const modal = event.target.nextElementSibling;
+            if (modal) {
+                modal.classList.add('active-modal');
+            }
+        }
+    });
+
+    // Event delegation for modal close icons
+    servicesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('services__modal-close')) {
+            const modal = event.target.closest('.services__modal');
+            if (modal) {
+                modal.classList.remove('active-modal');
+            }
+        }
+    });
+
+    // Close modals when clicking outside of them
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.services__modal') && !event.target.closest('.services__button')) {
+            closeAllModals();
+        }
     });
 });
 

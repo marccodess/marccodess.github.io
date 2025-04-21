@@ -19,7 +19,6 @@ export const education_content = [
   }
 ];
 
-// Function to render single work experience item
 function renderEducationItem(item, isLeft = true) {
   const contentHtml = `
     <div>

@@ -36,7 +36,6 @@ export const work_content = [
   }
 ];
 
-// Function to render single work experience item
 function renderWorkItem(item, isLeft = true) {
   const contentHtml = `
     <div>
