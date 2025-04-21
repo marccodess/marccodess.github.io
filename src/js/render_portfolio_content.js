@@ -22,17 +22,17 @@ export const renderPortfolioContent = () => {
     ];
 
     return portfolioProjects.map(project => `
-        <div class="swiper-slide">
-            <div class="portfolio__content grid">
-                <img src="${project.imgSrc}" alt="${project.title}" class="portfolio__img">
-                <div class="portfolio__data">
-                    <h3 class="portfolio__title">${project.title}</h3>
-                    <p class="portfolio__description">${project.description}</p>
-                    <a href="${project.link}" class="button button--flex button--small portfolio__button">
-                        More info
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
+        <div class="portfolio__content grid swiper-slide">
+            <img src="${project.imgSrc}" alt="${project.title}" class="portfolio__img">
+
+            <div class="portfolio__data">
+                <h3 class="portfolio__title">${project.title}</h3>
+                <class="portfolio__description">${project.description}</p>
+                <a href="${project.link}"
+                    class="button button--flex button--small portfolio__button">
+                    More info
+                    <i class="uil uil-arrow-right button__icon"></i>
+                </a>
             </div>
         </div>
     `).join('');

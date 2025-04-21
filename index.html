@@ -337,69 +337,17 @@
             <h2 class="section__title">Portfolio Projects</h2>
             <span class="section__subtitle"></span>
 
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="src/images/projects/brain-tumor-detection-project-image.jpeg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Brain Tumor Image Classification</h3>
-                            <p class="portfolio__description">
-                                Implementing a VGG-16 model to detect benign or malignant brain tumors.
-                            </p>
-                            <a href="https://github.com/marccodess/brain_tumor_detection"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="src/images/projects/data-structures-algorithms-project-image.png" alt=""
-                            class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Data Structures and Algorithms</h3>
-                            <p class="portfolio__description">
-                                Popular data structures and algorithms implemented in Python.
-                            </p>
-                            <a href="https://github.com/marccodess/data-structures-and-algorithms"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="src/images/projects/genetic-algorithm-project-image.png"
-                            alt="Visualization of genetic algorithm feature selection process" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Feature Selection using Genetic Algorithms</h3>
-                            <p class="portfolio__description">
-                                Improving model performance and excluding irrelevant features using Genetic Algorithms.
-                            </p>
-                            <a href="https://github.com/marccodess/genetic-algorithm-feature-selection"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
+            <div class="portfolio__container container swiper">
+                <div class="swiper-wrapper" id="portfolioContent">
+                    <!-- Portfolio content will be dynamically rendered here -->
                 </div>
-                <!--============ Add Arrows =============-->
+
                 <div class="swiper-button-next">
                     <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
                 </div>
                 <div class="swiper-button-prev">
                     <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
                 </div>
-
-                <!--============ Add Pagination =============-->
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -678,6 +626,7 @@
         import { renderWorkContent } from './src/js/render_work_content.js';
         import { renderEducationContent } from './src/js/render_education_content.js';
         import { renderServicesContent } from './src/js/render_skills_content.js';
+        import { renderPortfolioContent } from './src/js/render_portfolio_content.js';
         
         document.addEventListener('DOMContentLoaded', () => {
             // Render header social icons
@@ -694,6 +643,34 @@
 
             // Add services content rendering
             document.getElementById('services-container').innerHTML = renderServicesContent();
+
+            // Render portfolio content and initialize Swiper
+            document.getElementById('portfolioContent').innerHTML = renderPortfolioContent();
+            
+            // Initialize portfolio swiper
+            const portfolioSwiper = new Swiper('.portfolio__container', {
+                cssMode: true,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                breakpoints: {
+                    568: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 48,
+                    },
+                },
+                keyboard: true,
+            });
         });
     </script>
 </body>

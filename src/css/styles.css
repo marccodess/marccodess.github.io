@@ -743,7 +743,9 @@ li {
 
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
-    overflow: initial;
+    position: relative;
+    width: 100%;
+    padding-bottom: 3rem;
 }
 
 .portfolio__content {
@@ -769,6 +771,72 @@ li {
     transform: translateX(.25rem);
 }
 
+/* Navigation Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first-color);
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: -1rem;
+}
+
+.swiper-button-next {
+    right: -1rem;
+}
+
+/* Remove default Swiper arrow content */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+/* Custom arrow icons */
+.swiper-portfolio-icon {
+    font-size: 2rem;
+}
+
+/* Pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--text-color-light);
+    opacity: 0.5;
+    margin: 0 0.25rem;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: var(--first-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .swiper-button-prev {
+        left: 0.5rem;
+    }
+    
+    .swiper-button-next {
+        right: 0.5rem;
+    }
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
     content: "";
@@ -789,6 +857,7 @@ li {
 
 .swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: -2.5rem;
+    padding: 3rem 0rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -1320,6 +1389,8 @@ li {
 
     .swiper-container-horizontal>.swiper-pagination-bullets {
         bottom: -4.5rem;
+        padding: 3rem 0rem;
+
     }
 
     .contact__inputs {
