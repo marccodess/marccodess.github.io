@@ -122,17 +122,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio__container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+document.addEventListener('DOMContentLoaded', () => {
+    const portfolioSwiper = new Swiper('.portfolio__container', {
+        cssMode: true,
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: false,
+            // Force exactly 3 bullets
+            renderBullet: function (index, className) {
+                if (index < 3) { // Only show 3 bullets
+                    return '<span class="' + className + '"></span>';
+                }
+                return '';
+            },
+        },
+        keyboard: true,
+    });
 });
 
 /*==================== TESTIMONIAL ====================*/

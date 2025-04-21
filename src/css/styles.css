@@ -985,14 +985,14 @@ li {
 }
 
 .footer__links {
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 2fr);
     row-gap: 0.5rem;
-    column-gap: 0.5rem;
+    column-gap: 1.5rem;
     margin-top: 2rem;
-    width: 60%;
+    width: 80%;
     padding: 1rem;
     margin-left: auto;
     margin-right: auto;
