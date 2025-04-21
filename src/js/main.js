@@ -71,24 +71,52 @@ tabs.forEach(tab => {
 })
 
 /*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-    modalBtns = document.querySelectorAll('.services__button'),
-    modalCloses = document.querySelectorAll('.services__modal-close');
+document.addEventListener('DOMContentLoaded', () => {
+    const servicesContainer = document.getElementById('services-container');
 
-let modal = function (modalClick) {
-    modalViews[modalClick].classList.add('active-modal');
-};
+    // Function to close all modals
+    const closeAllModals = () => {
+        const activeModals = document.querySelectorAll('.services__modal.active-modal');
+        activeModals.forEach(modal => {
+            modal.classList.remove('active-modal');
+        });
+    };
 
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        modal(i);
-    })
-});
+    // Event delegation for "View More" buttons
+    servicesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('services__button') ||
+            event.target.closest('.services__button')) {
+            const modal = event.target.closest('.services__content').querySelector('.services__modal');
+            if (modal) {
+                event.stopPropagation(); // Prevent event from bubbling to document
+                modal.classList.add('active-modal');
+            }
+        }
+    });
 
-modalCloses.forEach(modalClose => {
-    modalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal');
+    // Event delegation for modal close icons
+    servicesContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('services__modal-close')) {
+            const modal = event.target.closest('.services__modal');
+            if (modal) {
+                modal.classList.remove('active-modal');
+            }
+        }
+    });
+
+    // Close modals when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!event.target.closest('.services__modal-content') && 
+            !event.target.closest('.services__button')) {
+            closeAllModals();
+        }
+    });
+
+    // Prevent modal content clicks from closing the modal
+    const modalContents = document.querySelectorAll('.services__modal-content');
+    modalContents.forEach(content => {
+        content.addEventListener('click', (event) => {
+            event.stopPropagation();
         });
     });
 });
@@ -177,17 +205,3 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
-/*==================== MEDIUM SWIPER ====================*/
-let mediumSwiper = new Swiper(".medium__container", {
-    cssMode: true,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});

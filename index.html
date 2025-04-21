@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="src/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="src/css/styles.css">
+
+    <!-- JS -->
+    <script type="module" src="src/js/main.js" defer></script>
 
     <title>marccodess | Portfolio</title>
 </head>
@@ -19,6 +22,7 @@
 <body class="dark-theme">
     <!-- HEADER -->
     <header class="header" id="header">
+        
         <nav class="nav container">
             <a href="#" class="nav__logo">marccodess 🚀</a>
             <div class="nav__menu" id="nav-menu">
@@ -74,26 +78,8 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__content grid">
-                    <div class="home__social">
-                        <a href="https://www.github.com/marccodess/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                        <a href="https://www.twitter.com/marccodess" target="_blank" class="home__social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 440">
-                                <path fill="#5789e0"
-                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                            </svg>
-                        </a>
-                        <a href="https://marccodess.medium.com/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-medium-m"></i>
-                        </a>
-                        <a href="https://www.instagram.com/marccodess/" target="_blank" class="home__social-icon">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@marccodess" target="home__social-icon"
-                            class="home__social-icon">
-                            <i class="uil uil-youtube"></i>
-                        </a>
+                    <div id="headerSocialIcons">
+                        <!-- Header social icons will be injected here -->
                     </div>
                     <div class="home__img">
                         <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +95,7 @@
             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                                <image class="home__blob-img" x=0 y=0 xlink:href="assets/img/self_image.png" />
+                                <image class="home__blob-img" x=0 y=0 xlink:href="src/images/profile/self_image.png" />
                             </g>
                         </svg>
 
@@ -190,114 +176,12 @@
         <!--==================== MEDIUM POSTS ====================-->
         <section class="medium section" id="blog">
             <h2 class="section__title">Latest Blog Posts</h2>
-            <span class="section__subtitle">Recent articles from Medium</span>
+            <span class="section__subtitle"></span>
 
-            <div class="medium__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- First Slide (3 articles) -->
-                    <div class="swiper-slide">
-                        <div class="medium__grid">
-                            <!-- Medium Post 1 -->
-                            <div class="medium__content most-recent">
-                                <!-- Most Recent Label -->
-                                <div class="most-recent-label">Most Recent</div>
-
-                                <div class="medium__top">
-                                    <img src="assets/img/medium_cursor_vscode.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">Should you switch from VSCode to Cursor?</h3>
-                                        <p class="medium__description">
-                                            My experience using VSCode (GitHub Copilot) and Cursor (Claude 3.5 Sonnet)
-                                            as a
-                                            Data Scientist
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/should-you-switch-from-vscode-to-cursor-45b1a0320d07"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-
-                            <!-- Medium Post 2 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="assets/img/medium_ollama.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <h3 class="medium__title">Run LLMs Locally using Ollama</h3>
-                                    <p class="medium__description">
-                                        Step-by-step process to running large language models locally on your laptop
-                                    </p>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/run-llms-locally-using-ollama-8f04dd9b14f9"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-
-                            <!-- Medium Post 3 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="assets/img/medium_confusion_matrix.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">What is a Confusion Matrix?</h3>
-                                        <p class="medium__description">
-                                            What are they, why, and when should we use them?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/what-is-a-confusion-matrix-05c9969fc8d8"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Slide (additional articles) -->
-                    <div class="swiper-slide">
-                        <div class="medium__grid">
-                            <!-- Medium Post 4 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="assets/img/medium_demystifying_ai.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">Demystifying AI: Explainable AI for Stakeholders</h3>
-                                        <p class="medium__description">
-                                            Bridging the Gap Between Data Scientists and Stakeholders
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/demystifying-ai-explainable-ai-for-stakeholders-ec2107c812cc"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="medium__container container swiper">
+                <div class="swiper-wrapper" id="mediumContent">
+                    <!-- Medium content will be dynamically rendered here -->
                 </div>
-
-                <!--============ Add Arrows =============-->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!--============ Add Pagination =============-->
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -323,162 +207,14 @@
                 <div class="qualification__sections">
                     <!--===============================QUALIFICATION CONTENT 1 ===========================-->
                     <div class="qualification__content" data-content id="education">
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">MSc: Data Science and Analytics</h3>
-                                <span class="qualification__subtitle">Manchester Metropolitan University, UK</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    Sept 2016 - June 2017
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-                        <!--===============================QUALIFICATION 2 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Research Assistant/Part-time Lecturer</h3>
-                                <span class="qualification__subtitle">University of Salford, UK</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    June 2014 - Sept 2016
-                                </div>
-                            </div>
-
-                        </div>
-                        <!--===============================QUALIFICATION 3 ===========================-->
-                        <div class="qualification__data">
-
-                            <div>
-                                <h3 class="qualification__title">BSc: Geography - Glaciology and Climate Change</h3>
-                                <span class="qualification__subtitle">University of Salford, UK</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    Sept 2011 - June 2014
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                            </div>
+                        <div id="educationContent">
+                            <!-- Education content will be dynamically rendered here -->
                         </div>
                     </div>
                     <!--===============================QUALIFICATION CONTENT 2 ===========================-->
                     <div class="qualification__content qualification__active" data-content id="work">
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Lead Data Scientist</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.viginmedia.co.uk/" target="_blank">Virgin Media O2</a>
-                                </span>
-                                <h5 class="qualification__location">London/Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    Jan 2024 - Present
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Senior Data Scientist
-                                </h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.viginmedia.co.uk/" target="_blank">Virgin Media O2</a>
-                                </span>
-                                <h5 class="qualification__location">London/Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    July 2023 - Jan 2024
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 1 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Data Scientist</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.viginmedia.co.uk/" target="_blank">Virgin Media O2</a>
-                                </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    May 2020 - July 2023
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 2 ===========================-->
-                        <div class="qualification__data">
-                            <div></div>
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Data Scientist
-                                </h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.ao.com" target="_blank">AO World</a>
-                                </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    July 2019 - Mar 2020
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--===============================QUALIFICATION 3 ===========================-->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Data Scientist</h3>
-                                <span class="qualification__subtitle">
-                                    <a href="https://www.https://deeset.co.uk/" target="_blank">Dee
-                                        Set</a>
-                                </span>
-                                <h5 class="qualification__location">Manchester, UK</h5>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i>
-                                    April 2018 - July 2019
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
+                        <div id="workContent">
+                            <!-- Work content will be dynamically rendered here -->
                         </div>
                     </div>
                 </div>
@@ -490,244 +226,8 @@
             <h2 class="section__title">Services/Skills</h2>
             <span class="section__subtitle"></span>
 
-            <div class="services__container container grid">
-                <!-- ============== SERVICE ONE ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-robot services__icon"></i>
-                        <h3 class="services__title">Automation</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">Automation & Process Optimization</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Developed and implemented sophisticated web scraping solutions for 
-                                       automated data extraction from complex web applications and enterprise portals.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Designed and deployed end-to-end automation workflows that significantly 
-                                       reduced manual intervention and improved operational efficiency across 
-                                       multiple business units.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Technical Stack:</b> Selenium WebDriver, Beautiful Soup</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============== SERVICE TWO ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-comparison services__icon"></i>
-                        <h3 class="services__title">Machine Learning</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">Machine Learning</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Design and implementation of sophisticated machine learning solutions 
-                                       for complex business problems, enabling data-driven insights and 
-                                       automated decision-making systems.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p><b>Core Expertise:</b> Gradient Boosting (XGBoost, LightGBM, CatBoost), 
-                                       Ensemble Methods (Random Forest), Clustering (K-Means), 
-                                       Dimensionality Reduction (PCA), Statistical Modeling</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Technical Stack:</b> scikit-learn, statsmodels, pandas, NumPy</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============== SERVICE THREE ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-brain services__icon"></i>
-                        <h3 class="services__title">Deep Learning</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">Deep Learning & Neural Networks</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Architected and implemented custom neural networks for Natural Language Processing, 
-                                       enabling automated customer intent classification across multiple communication channels 
-                                       with high accuracy.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Developed and deployed advanced Computer Vision solutions for retail analytics, 
-                                       optimizing inventory management and merchandising efficiency for enterprise-level 
-                                       clients.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Technical Stack:</b> PyTorch, TensorFlow, Keras, 
-                                       Neural Network Architecture Design & Optimization</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============== SERVICE FOUR ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-cloud services__icon"></i>
-                        <h3 class="services__title">Cloud Computing</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">Cloud Architecture & MLOps</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Extensive experience with Google Cloud Platform (GCP), specializing in 
-                                       ML model deployment using Vertex AI and large-scale data processing with BigQuery.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Cross-platform expertise across major cloud providers (AWS, Azure, GCP), 
-                                       focusing on compute infrastructure optimization and scalable ML deployments.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Core Technologies:</b> Vertex AI, BigQuery, Model Garden, Cloud Storage, Cloud SDK, 
-                                       Dataflow, Looker, EC2</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============== SERVICE FIVE ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-constructor services__icon"></i>
-                        <h3 class="services__title">Data Engineering</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">Data Engineering & Architecture</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Designed and implemented robust data architectures and ETL pipelines, 
-                                       leveraging dbt Cloud for scalable data transformations and 
-                                       maintaining data quality.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Extensive experience with diverse database technologies, including 
-                                       BigQuery for analytics, MSSQL for transactional data, and MongoDB 
-                                       for document-based storage solutions.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Technical Stack:</b> Google BigQuery, Microsoft SQL Server, 
-                                       dbt Cloud, MongoDB Atlas, SQLite, DBeaver.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============== SERVICE SIX ============== -->
-                <div class="services__content">
-                    <div>
-                        <i class="uil uil-arrow services__icon"></i>
-                        <h3 class="services__title">GenAI Solutions</h3>
-                    </div>
-
-                    <span class="button button--flex button--small button--link services__button">
-                        View More
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </span>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <h4 class="services__model-title">RAG & AI-Powered Development</h4>
-                            <i class="uil uil-times services__modal-close"></i>
-
-                            <ul class="services__model-services grid">
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Design and implementation of Retrieval-Augmented Generation (RAG) pipelines, integrating domain-specific data for accurate and context-aware AI responses.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-check-circle services__modal-icon"></i>
-                                    <p>Expertise in vector embeddings to efficiently encode, search, and retrieve information using state-of-the-art vectorization techniques.</p>
-                                </li>
-
-                                <li class="services__modal-service">
-                                    <i class="uil uil-box services__modal-icon"></i>
-                                    <p><b>Technical Stack:</b> LLMs, LangChain, LlamaIndex, ChromaDB, OpenAI APIs.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+            <div id="services-container" class="services__container container grid">
+                <!-- Services content will be dynamically rendered here -->
             </div>
         </section>
         <!--==================== PORTFOLIO ====================-->
@@ -735,69 +235,17 @@
             <h2 class="section__title">Portfolio Projects</h2>
             <span class="section__subtitle"></span>
 
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/brain-tumor-detection-project-image.jpeg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Brain Tumor Image Classification</h3>
-                            <p class="portfolio__description">
-                                Implementing a VGG-16 model to detect benign or malignant brain tumors.
-                            </p>
-                            <a href="https://github.com/marccodess/brain_tumor_detection"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/data-structures-algorithms-project-image.png" alt=""
-                            class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Data Structures and Algorithms</h3>
-                            <p class="portfolio__description">
-                                Popular data structures and algorithms implemented in Python.
-                            </p>
-                            <a href="https://github.com/marccodess/data-structures-and-algorithms"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/img/genetic-algorithm-project-image.png"
-                            alt="Visualization of genetic algorithm feature selection process" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Feature Selection using Genetic Algorithms</h3>
-                            <p class="portfolio__description">
-                                Improving model performance and excluding irrelevant features using Genetic Algorithms.
-                            </p>
-                            <a href="https://github.com/marccodess/genetic-algorithm-feature-selection"
-                                class="button button--flex button--small portfolio__button">
-                                More info
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
+            <div class="portfolio__container container swiper">
+                <div class="swiper-wrapper" id="portfolioContent">
+                    <!-- Portfolio content will be dynamically rendered here -->
                 </div>
-                <!--============ Add Arrows =============-->
+
                 <div class="swiper-button-next">
                     <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
                 </div>
                 <div class="swiper-button-prev">
                     <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
                 </div>
-
-                <!--============ Add Pagination =============-->
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -805,162 +253,11 @@
         <!--==================== RESOURCES ====================-->
         <section class="resources section" id="resources">
             <h2 class="section__title">Resources</h2>
-            <span class="section__subtitle">My Recommended Resources</span>
+            <span class="section__subtitle"></span>
 
-            <div class="skills__container container grid">
-                <div>
-                    <!--====================== SKILLS 1 =============================-->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-file-alt skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Online Courses</h1>
-                                <span class="skills__subtitle">Favourate Online Course Material</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a href="https://www.coursera.org/learn/introduction-git-github?query=">Introduction
-                                            to Git and GitHub</a>
-                                    </h3>
-                                    <i class="skills__subtitle">Coursera - Google</i>
-                                    <span class="skills__number">100%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__100"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a
-                                            href="https://www.coursera.org/specializations/deep-learning?utm_source=gg&utm_medium=sem&utm_campaign=17-DeepLearning-ROW&utm_content=B2C&campaignid=6465471773&adgroupid=77415260637&device=c&keyword=deeplearning%20ai%20coursera&matchtype=p&network=g&devicemodel=&adpostion=&creativeid=506751438660&hide_mobile_promo&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV41jLYznHnpFYgcjOso6tFdYNxvgH9exb7G8SMw6mSV46VFs5Got4UaAn3vEALw_wcB">Deep
-                                            Learning Specialization</a>
-                                    </h3>
-                                    <i class="skills__subtitle">Coursera - DeepLearning.ai</i>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__95"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a href="https://www.coursera.org/learn/gcp-fundamentals?=">Google Cloud
-                                            Fundamentals: Core Infrastructure</a>
-                                    </h3>
-                                    <i class="skills__subtitle">Coursera - Google Cloud</i>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--====================== SKILLS 2 =============================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-file-alt skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Books</h1>
-                                <span class="skills__subtitle">Recommended Literature</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a
-                                            href="https://www.amazon.co.uk/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1098125975/ref=sr_1_2?crid=GREBRN1YK2HT&keywords=data+science+keras+tensorflow&qid=1654432509&sprefix=data+science+keras+tensorflow%2Caps%2C46&sr=8-2">Hands–On
-                                            Machine Learning with Scikit–Learn, Keras, and TensorFlow</a>
-                                    </h3>
-                                    <i class="skills__subtitle">O'Reilly - Aurélien Géron (2022)</i>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__95"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a
-                                            href="https://www.amazon.co.uk/Data-Science-Scratch-Joel-Grus/dp/1492041130/ref=sr_1_1?adgrpid=107055280307&gclid=Cj0KCQjwqPGUBhDwARIsANNwjV63kSio9mOkm-_k5X06_YVCqyCQi-butlUKzc7WBhmM2NK-jM2iv0QaAmoqEALw_wcB&hvadid=447903388991&hvdev=c&hvlocphy=9046518&hvnetw=g&hvqmt=e&hvrand=17810398849075247531&hvtargid=kwd-299673867783&hydadcr=5307_1829672&keywords=data+science+from+scratch&qid=1654432320&sr=8-1">Data
-                                            Science from Scratch</a>
-                                    </h3>
-                                    <i class="skills__subtitle">O'Reilly - Joel Grus (2019)</i>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--====================== SKILLS 3 =============================-->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-file-alt skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__title">Papers</h1>
-                                <span class="skills__subtitle">Research Papers Everyone Should Read</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a href="https://arxiv.org/pdf/1706.03762.pdf">Attention Is All You Need</a>
-                                    </h3>
-                                    <span class="skills__subtitle">Vaswani, A <i>et al.</i> (2017) </span>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__90"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__title">
-                                    <h3 class="skills__name">
-                                        <a
-                                            href="https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet
-                                            Classification with Deep Convolutional
-                                            Neural Networks</a>
-                                    </h3>
-                                    <span class="skills__subtitle">Krizhevsky, A, Sutskever, I and Hinton, GE (2012)
-                                    </span>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__85"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="skills__container container grid" id="resourcesContent">
+                <!-- Resources content will be dynamically rendered here -->
+            </div>
         </section>
 
         <!--==================== CONTACT ME ====================-->
@@ -987,40 +284,6 @@
                     <i class="uil uil-youtube"></i>
                 </a>
             </div>
-            <!-- <div class="contact__container container grid">
-                <div>
-                    <form method="post" action="" enctype="text/plain" class="contact__form grid">
-                        <div class="contact__inputs grid">
-                            <div class="contact__content">
-                                <label for="name" class="contact__label">Name</label>
-                                <input type="text" name="Name" class="contact__input">
-                            </div>
-
-                            <div class="contact__content">
-                                <label for="email" class="contact__label">Email</label>
-                                <input type="email" name="Email" class="contact__input">
-                            </div>
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="project-contact" class="contact__label">Subject</label>
-                            <input type="text" name="Subject" class="contact__input">
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="message-contact" class="contact__label">Message</label>
-                            <textarea name="Message" cols="0" rows="7" id="message-contact"
-                                class="contact__input"></textarea>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="button button--flex">Send Message
-                                <i class="uil uil-message button__icon"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div> -->
         </section>
     </main>
 
@@ -1050,27 +313,6 @@
                         <a href="#resources" class="footer__link">Resources</a>
                     </li>
                 </ul>
-
-                <div class="footer__socials">
-                    <a href="https://www.github.com/marccodess/" target="_blank" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                    <a href="https://www.twitter.com/marccodess" target="_blank" class="footer__social">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="19" width="19" viewBox="0 0 500 440">
-                            <path fill="#ffffff"
-                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                        </svg>
-                    </a>
-                    <a href="https://marccodess.medium.com/" target="_blank" class="footer__social">
-                        <i class="uil uil-medium-m"></i>
-                    </a>
-                    <a href="https://www.instagram.com/marccodess/" target="_blank" class="footer__social">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@marccodess" target="_blank" class="footer__social">
-                        <i class="uil uil-youtube"></i>
-                    </a>
-                </div>
             </div>
 
             <p class="footer__copy">&#169; marccodess. All rights reserved.</p>
@@ -1083,11 +325,66 @@
         <i class="uil uil-arrow-up scroll__icon"></i>
     </a>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <!--==================== SCRIPTS ====================-->
+    <script src="src/js/swiper-bundle.min.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <script type="module">
+        import { renderHeaderSocials, renderFooterSocials } from './src/js/render_home_social_icons.js';
+        import { renderWorkContent } from './src/js/render_work_content.js';
+        import { renderEducationContent } from './src/js/render_education_content.js';
+        import { renderServicesContent } from './src/js/render_skills_content.js';
+        import { renderPortfolioContent } from './src/js/render_portfolio_content.js';
+        import { renderResourcesContent } from './src/js/render_resources_content.js';
+        import { renderMediumContent } from './src/js/render_medium_content.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Render header social icons only
+            document.getElementById('headerSocialIcons').innerHTML = renderHeaderSocials();
 
-    <!--==================== MAIN JS ====================-->
-    <script src="assets/js/main.js" defer></script>
+            // Render work content
+            document.getElementById('workContent').innerHTML = renderWorkContent();
+            
+            // Render education content
+            document.getElementById('educationContent').innerHTML = renderEducationContent();
+
+            // Add services content rendering
+            document.getElementById('services-container').innerHTML = renderServicesContent();
+
+            // Render portfolio content and initialize Swiper
+            document.getElementById('portfolioContent').innerHTML = renderPortfolioContent();
+            
+            // Add resources content rendering
+            document.getElementById('resourcesContent').innerHTML = renderResourcesContent();
+
+            // Add medium content rendering
+            document.getElementById('mediumContent').innerHTML = renderMediumContent();
+
+            // Initialize portfolio swiper
+            const portfolioSwiper = new Swiper('.portfolio__container', {
+                cssMode: true,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                breakpoints: {
+                    568: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 48,
+                    },
+                },
+                keyboard: true,
+            });
+        });
+    </script>
 </body>
 
 </html>
