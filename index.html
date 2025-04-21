@@ -176,114 +176,12 @@
         <!--==================== MEDIUM POSTS ====================-->
         <section class="medium section" id="blog">
             <h2 class="section__title">Latest Blog Posts</h2>
-            <span class="section__subtitle">Recent articles from Medium</span>
+            <span class="section__subtitle"></span>
 
-            <div class="medium__container container swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- First Slide (3 articles) -->
-                    <div class="swiper-slide">
-                        <div class="medium__grid">
-                            <!-- Medium Post 1 -->
-                            <div class="medium__content most-recent">
-                                <!-- Most Recent Label -->
-                                <div class="most-recent-label">Most Recent</div>
-
-                                <div class="medium__top">
-                                    <img src="src/images/blog/medium_cursor_vscode.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">Should you switch from VSCode to Cursor?</h3>
-                                        <p class="medium__description">
-                                            My experience using VSCode (GitHub Copilot) and Cursor (Claude 3.5 Sonnet)
-                                            as a
-                                            Data Scientist
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/should-you-switch-from-vscode-to-cursor-45b1a0320d07"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-
-                            <!-- Medium Post 2 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="src/images/blog/medium_ollama.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <h3 class="medium__title">Run LLMs Locally using Ollama</h3>
-                                    <p class="medium__description">
-                                        Step-by-step process to running large language models locally on your laptop
-                                    </p>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/run-llms-locally-using-ollama-8f04dd9b14f9"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-
-                            <!-- Medium Post 3 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="src/images/blog/medium_confusion_matrix.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">What is a Confusion Matrix?</h3>
-                                        <p class="medium__description">
-                                            What are they, why, and when should we use them?
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/what-is-a-confusion-matrix-05c9969fc8d8"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Second Slide (additional articles) -->
-                    <div class="swiper-slide">
-                        <div class="medium__grid">
-                            <!-- Medium Post 4 -->
-                            <div class="medium__content">
-                                <div class="medium__top">
-                                    <img src="src/images/blog/medium_demystifying_ai.jpeg" alt="Medium post thumbnail"
-                                        class="medium__img" loading="lazy">
-                                    <div class="medium__data">
-                                        <h3 class="medium__title">Demystifying AI: Explainable AI for Stakeholders</h3>
-                                        <p class="medium__description">
-                                            Bridging the Gap Between Data Scientists and Stakeholders
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="https://marccodess.medium.com/demystifying-ai-explainable-ai-for-stakeholders-ec2107c812cc"
-                                    target="_blank" class="button button--flex button--small medium__button">
-                                    Read More
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="medium__container container swiper">
+                <div class="swiper-wrapper" id="mediumContent">
+                    <!-- Medium content will be dynamically rendered here -->
                 </div>
-
-                <!--============ Add Arrows =============-->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <!--============ Add Pagination =============-->
-                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -415,12 +313,6 @@
                         <a href="#resources" class="footer__link">Resources</a>
                     </li>
                 </ul>
-
-                <div class="footer__socials">
-                    <div id="footerSocialIcons">
-                        <!-- Footer social icons will be injected here -->
-                    </div>
-                </div>
             </div>
 
             <p class="footer__copy">&#169; marccodess. All rights reserved.</p>
@@ -443,13 +335,11 @@
         import { renderServicesContent } from './src/js/render_skills_content.js';
         import { renderPortfolioContent } from './src/js/render_portfolio_content.js';
         import { renderResourcesContent } from './src/js/render_resources_content.js';
+        import { renderMediumContent } from './src/js/render_medium_content.js';
         
         document.addEventListener('DOMContentLoaded', () => {
-            // Render header social icons
+            // Render header social icons only
             document.getElementById('headerSocialIcons').innerHTML = renderHeaderSocials();
-            
-            // Render footer social icons
-            document.getElementById('footerSocialIcons').innerHTML = renderFooterSocials();
 
             // Render work content
             document.getElementById('workContent').innerHTML = renderWorkContent();
@@ -465,6 +355,9 @@
             
             // Add resources content rendering
             document.getElementById('resourcesContent').innerHTML = renderResourcesContent();
+
+            // Add medium content rendering
+            document.getElementById('mediumContent').innerHTML = renderMediumContent();
 
             // Initialize portfolio swiper
             const portfolioSwiper = new Swiper('.portfolio__container', {
