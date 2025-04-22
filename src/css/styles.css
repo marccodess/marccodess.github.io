@@ -110,6 +110,9 @@ body.dark-theme {
 
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 body {
@@ -118,6 +121,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 h1,
@@ -148,21 +152,23 @@ li {
     list-style-type: none
 }
 
-
-
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 2rem; /* Increased top padding from 2rem to 4rem */
+    width: 100%;
+    overflow: hidden;
 }
 
 .section__title {
     font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+    margin-top: 1rem; /* Add margin to top of titles */
 }
 
 .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1);
+    margin-bottom: 0.5rem;
     padding: var(--mb-1);
 }
 
@@ -171,16 +177,41 @@ li {
     text-align: center;
 }
 
+/* Adjust spacing for mobile */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 3rem 0 1rem; /* Slightly less padding on mobile but still more than before */
+    }
+
+    .section__title {
+        margin-top: 2.5rem; /* Less margin on mobile */
+    }
+}
+
+/* Adjust spacing for larger screens */
+@media screen and (min-width: 1024px) {
+    .section {
+        padding: 6rem 0 2rem; /* Even more padding on desktop */
+    }
+
+    .section__title {
+        margin-top: 3rem; /* More margin on desktop */
+    }
+}
+
 /*==================== LAYOUT ====================*/
 .container {
-    max-width: 768px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    width: calc(100% - 2rem); /* Subtract margins from width */
+    max-width: 968px; /* Add max-width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
 }
 
 .grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .header {
@@ -459,6 +490,7 @@ li {
 /*==================== SKILLS ====================*/
 .skills__container {
     row-gap: 0;
+    overflow: visible;
 }
 
 .skills__header {
@@ -644,6 +676,7 @@ li {
 .services__container {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
 }
 
 .services__content {
@@ -746,6 +779,8 @@ li {
     position: relative;
     width: 100%;
     padding-bottom: 3rem;
+    overflow: visible;
+    margin-bottom: 4rem;
 }
 
 .portfolio__content {
@@ -826,6 +861,13 @@ li {
     background-color: var(--first-color);
 }
 
+/* Update pagination position */
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: -32px;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
     .swiper-button-prev {
@@ -835,39 +877,83 @@ li {
     .swiper-button-next {
         right: 0.5rem;
     }
+
+    .container {
+        width: calc(100% - 1rem);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* Fix portfolio container */
+    .portfolio__container {
+        width: 100%;
+        padding: 0 0.5rem;
+        margin-bottom: 3rem; /* Slightly smaller margin on mobile */
+        overflow: visible;
+    }
+
+    /* Fix medium posts container */
+    .medium__container {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    /* Fix services container */
+    .services__container {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    /* Fix portfolio overflow */
+    .portfolio__container {
+        padding: 0 0.5rem;
+        overflow: visible;
+    }
+
+    .portfolio__content {
+        padding: 0;
+    }
+
+    /* Fix medium posts overflow */
+    .medium__container {
+        padding: 0 0.5rem;
+        overflow: hidden;
+    }
+
+    .medium__content {
+        padding: 1rem;
+    }
+
+    /* Fix any swiper overflow */
+    .swiper-container {
+        overflow: hidden;
+    }
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    content: "";
+@media screen and (max-width: 768px) {
+    .medium__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.swiper-portfolio-icon {
-    font-size: 2rem;
-    color: var(--first-color);
-}
+/* Large screen adjustments */
+@media screen and (min-width: 1024px) {
+    .portfolio__container {
+        margin-bottom: 5rem; /* Larger margin on desktop */
+    }
 
-.swiper-button-prev {
-    left: -.5rem;
-}
+    .swiper-button-prev {
+        left: -3.5rem;
+    }
 
-.swiper-button-next {
-    right: -.5rem;
-}
+    .swiper-button-next {
+        right: -3.5rem;
+    }
 
-.swiper-container-horizontal>.swiper-pagination-bullets {
-    bottom: -4rem;
-    padding: 3rem 0rem;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet {
-    outline: none;
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: -32px;
+        padding: 3rem 0;
+    }
 }
 
 /*==================== PROJECT IN MIND ====================*/
@@ -985,12 +1071,12 @@ li {
 }
 
 .footer__links {
-    font-size: var(--smaller-font-size);
+    font-size: var(--small-font-size);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 2fr);
     row-gap: 0.5rem;
-    column-gap: 1.5rem;
+    column-gap: 0.5rem;
     margin-top: 2rem;
     width: 80%;
     padding: 1rem;
@@ -1079,8 +1165,16 @@ li {
 /* For small devices */
 @media screen and (max-width: 350px) {
     .container {
+        width: calc(100% - 0.5rem);
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    .container {
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     .nav__menu {
@@ -1174,6 +1268,17 @@ li {
     }
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 1rem 0 1rem;
+    }
+
+    .container {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1351,6 +1456,10 @@ li {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+    .container {
+        margin: 0 auto;
+        max-width: 968px;
+    }
 
     .header,
     .main,
@@ -1388,7 +1497,7 @@ li {
     }
 
     .swiper-container-horizontal>.swiper-pagination-bullets {
-        bottom: -4rem;
+        bottom: -32px;
         padding: 3rem 0rem;
 
     }
@@ -1400,9 +1509,11 @@ li {
 
 /*==================== MEDIUM POSTS ====================*/
 .medium__container {
-    overflow: initial;
-    padding: 1rem 0;
-}
+    position: relative;
+    width: 100%;
+    padding-bottom: 3rem;
+    overflow: visible;
+
 
 .medium__grid {
     display: grid;
@@ -1417,7 +1528,7 @@ li {
     justify-content: space-between;
     min-height: 450px;
     padding: 1.5rem;
-    border: 2px solid #5789e0;
+    border: 2px solid var(--first-color);
     border-radius: var(--mb-0-5);
     background: var(--container-color);
 }
@@ -1461,10 +1572,70 @@ li {
     transform: translateX(.25rem);
 }
 
+/* Swiper navigation styles */
+.medium__container .swiper-button-prev,
+.medium__container .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--first-color);
+    z-index: 10;
+}
+
+.medium__container .swiper-button-prev {
+    left: -1rem;
+}
+
+.medium__container .swiper-button-next {
+    right: -1rem;
+}
+
+/* Remove default Swiper arrow content */
+.medium__container .swiper-button-prev::after,
+.medium__container .swiper-button-next::after {
+    display: none;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .medium__container {
+        padding: 0 0.5rem;
+        overflow: hidden;
+    }
+
+    .medium__content {
+        padding: 1rem;
+    }
+
+    .medium__container .swiper-button-prev {
+        left: 0.5rem;
+    }
+    
+    .medium__container .swiper-button-next {
+        right: 0.5rem;
+    }
+}
+
 /* For medium devices */
 @media screen and (max-width: 768px) {
     .medium__grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large screen adjustments */
+@media screen and (min-width: 1024px) {
+    .medium__container .swiper-button-prev {
+        left: -3.5rem;
+    }
+
+    .medium__container .swiper-button-next {
+        right: -3.5rem;
     }
 }
 
